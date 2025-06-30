@@ -35,7 +35,7 @@ app.use('/api/auth', AuthRouter)
 app.use('/api', BlogRouter)
 
 app.get('/', (req, res) => {
-    res.json({ message: 'Welcome to the Blog API' })
+    res.send('Welcome to the Blog App API');
 })
 
 // Error handling middleware
