@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+html[data-mode="dark"] body {
+    background-color: #121212;
+    color: white;
+  }
+.glow-bg h1{
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 900;
+    font-style: normal;}
+.glow-bg::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #4957ef 0%, #1f1d37 100%);
+    filter: blur(60px);
+    z-index: -1;
+    border-radius: 50%;
+  }
+  /* styles.css */
+.tiptap-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.tiptap-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+.tiptap-content ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+.tiptap-content:focus,
+.tiptap-content:focus-visible,
+.tiptap-content:focus-within {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
