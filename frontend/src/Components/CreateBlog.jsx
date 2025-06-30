@@ -5,6 +5,7 @@ import StarterKit from '@tiptap/starter-kit'
 import { Button } from '@radix-ui/themes/dist/cjs/index.js'
 import parse from 'html-react-parser'
 import { axiosLocal } from '../utils/Axios'
+import { FaCross, FaTimes } from 'react-icons/fa'
 // import axiosInstance from '../utils/Axios'
 const extensions=[
   StarterKit
@@ -114,13 +115,13 @@ const CreateBlog = () => {
   <div className="tags flex flex-wrap gap-2 mt-2">
     {tags.map((tag, index) => (
       <span key={index} className="bg-blue-100 px-3 py-1 rounded-full">
-        {tag} <button onClick={() => removeTag(index)}>❌</button>
+        {tag} <button onClick={() => removeTag(index)}><FaTimes/></button>
       </span>
     ))}
   </div>
   </div>
     <div className="w-full flex justify-start">
-    <Button type='submit' onClick={handleSave} className='mt-5 w-fit'>Save</Button>
+    <Button type='submit' onClick={handleSave} className='mt-5 w-fit'>Publish</Button>
 
     </div>
   </div>

@@ -22,7 +22,7 @@ const {user:currUser,token}=useAuth()
     const fetchBlog = async () => {
       try {
         const res = await axiosLocal.get(`/blogs/${id}`);
-        console.log(res)
+        // console.log(res)
         
         setBlog(res.data.blog); // or res.data if blog isn't nested
         setLikes(res.data.blog.likes||0)

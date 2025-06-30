@@ -6,7 +6,7 @@ import { FaRecycle } from "react-icons/fa";
 import { BiRefresh } from "react-icons/bi";
 
 const Blogs = () => {
-    const { user, fetchBlogs,loading,blogs,token ,navigate} = useAuth();
+    const {  fetchBlogs,loading,blogs,token ,navigate} = useAuth();
 
     if (loading) {
         return <div>Loading...</div>;
@@ -15,7 +15,7 @@ const Blogs = () => {
     return <>
     <div className="w-full p-5 flex justify-center items-center flex-col gap-3">
         <div className="w-full flex justify-end">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={()=>navigate('/createBlog')} disabled={!token}>Create Blog</button>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={()=>{if(!token) alert('Please Login to Create Blogs');navigate('/createBlog')}} disabled={!token}>Create Blog</button>
        <button onClick={()=>fetchBlogs()} className="text-2xl px-2 rounded-md border-2 mx-1"><BiRefresh/></button>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 p-5 gap-5 w-full">
