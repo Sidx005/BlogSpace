@@ -15,13 +15,13 @@ const PORT = process.env.PORT || 3000
 // Move CORS configuration BEFORE other middleware
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://blog-space-frontend.vercel.app',
   credentials: true
 }))
 
 app.options('*',cors(
   {
-    origin:'http://localhost:5173',
+    origin:'https://blog-space-frontend.vercel.app',
     credentials: true,
   }
 ))
