@@ -91,7 +91,7 @@ const MyProfile = () => {
   },[selectedFile])
   
   const deleteBlogs=async(blogId)=>{
-    if(!confirm(("Are you sure you want to delete this blog?")) return;
+    if(!confirm("Are you sure you want to delete this blog?")) return;
     try {
       const res=await axiosLocal.delete(`/blogs/${blogId}`,{
         headers:{'Authorization':`Bearer ${token}`}
