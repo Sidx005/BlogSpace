@@ -42,7 +42,8 @@ const checkAuth=async()=>{
         setUser(check.data.user)
 
     } catch (error) {
-        setUser(null)
+      console.error(error)
+        // setUser(null)
     }finally{
         setLoading(false)
     }
