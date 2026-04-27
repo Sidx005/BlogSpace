@@ -54,7 +54,7 @@ export default function AboutPage() {
       {/* SECTION BLOCK */}
       <section className="relative h-[80vh] flex items-center justify-end text-right">
         <img
-          src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://plus.unsplash.com/premium_photo-1722018576685-45a415a4ff67?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-black/70" />
