@@ -39,7 +39,7 @@ const checkAuth=async()=>{
             }
         })
         console.log(check.data.user)
-        setUser(check.data.user)
+        setUser(check.data)
 
     } catch (error) {
       console.error(error)
