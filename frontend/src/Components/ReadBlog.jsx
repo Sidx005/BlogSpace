@@ -72,6 +72,7 @@ const {user:currUser,token}=useAuth()
         <img src={blog?.header} className='w-full rounded-lg  h-full object-cover'  alt="" />
       </div>
       <h1 className='text-4xl font-bold mb-5'>{blog?.title}</h1>
+        
       <p className='text-gray-300 mb-3'>Author: {blog?.author.name}</p>
       <div
         className='text-lg'
@@ -80,6 +81,13 @@ const {user:currUser,token}=useAuth()
       <div className='flex gap-3 items-start mt-5'>
         <Button ><FaThumbsUp onClick={handleLike}/>{likes}</Button>
         </div>
+        <div className="flex flex-wrap gap-2 mb-4">
+  {blog?.tags?.map((tag, index) => (
+    <span key={index} className="bg-gray-200 text-black px-3 py-1 rounded-full text-sm">
+      #{tag}
+    </span>
+  ))}
+</div>
     {/* </div> */}
     </> ):<p>No Blogs Found</p>}
 
