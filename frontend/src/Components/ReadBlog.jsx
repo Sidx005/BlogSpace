@@ -81,9 +81,9 @@ const {user:currUser,token}=useAuth()
       <div className='flex gap-3 items-start mt-5'>
         <Button ><FaThumbsUp onClick={handleLike}/>{likes}</Button>
         </div>
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mt-5 mb-4">
   {blog?.tags?.map((tag, index) => (
-    <span key={index} className="bg-gray-200 text-black px-3 py-1 rounded-full text-sm">
+    <span key={index} className="bg-violet-100 text-violet-700 border border-violet-300 px-3 py-1 rounded-full text-sm">
       #{tag}
     </span>
   ))}
