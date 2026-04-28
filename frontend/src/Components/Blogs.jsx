@@ -48,6 +48,16 @@ const Blogs = () => {
             	</Text>
                 <Text as="p" size="3">
             <Strong>Author : </Strong> {blog.author.name}</Text>
+		<div className="flex flex-wrap gap-2 mb-4">
+  {blog?.tags?.map((tag, index) => (
+    <span
+      key={index}
+      className="bg-violet-100 text-violet-700 border border-violet-300 px-3 py-1 rounded-full text-sm"
+    >
+      #{tag}
+    </span>
+  ))}
+</div>
 	</Card>
 </Box>
 </Link>
